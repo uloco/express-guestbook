@@ -1,5 +1,12 @@
 # Express Guestbook Kubernetes Example
 
+
+### Features
+
+* guestbook app written in express.js
+* mongodb database
+* entries are persisted between pod restarts / kills
+
 ## Build the container
 
 ```
@@ -17,3 +24,4 @@ eval $(minikube completion zsh)
 kubectl apply -f ./deployment.yaml
 minikube service guestbook-express-service
 ```
+
