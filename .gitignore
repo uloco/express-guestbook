@@ -3,6 +3,3 @@
 
 # Logs
 npm-debug.log*
-
-# misc
-.env
