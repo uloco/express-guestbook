@@ -31,9 +31,7 @@ spec:
     app: guestbook-express
   ports:
     - protocol: TCP
-      port: 8087
-      targetPort: 8080
-      nodePort: 30000
+      port: 8080
 ---
 apiVersion: apps/v1
 kind: Deployment
