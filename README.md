@@ -7,7 +7,7 @@ npm install
 docker build -t guestbook-express .
 ```
 
-## Deyploy to minikube
+## Deploy to minikube
 
 Make sure minikube is installed, then run:
 
