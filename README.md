@@ -25,3 +25,10 @@ kubectl apply -f ./deployment.yaml
 minikube service guestbook-express-service
 ```
 
+## Ingress
+To use the ingress service instead of minikube service do the following:
+
+```
+minikube addons enable ingress
+```
+

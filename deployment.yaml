@@ -27,6 +27,7 @@ kind: Service
 metadata:
   name: guestbook-express-service
 spec:
+  type: NodePort
   selector:
     app: guestbook-express
   ports:
@@ -85,3 +86,22 @@ spec:
   resources:
     requests:
       storage: 1Gi
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: guestbook-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx-example
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: guestbook-express-service
+            port:
+              number: 80
